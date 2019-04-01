@@ -7,7 +7,7 @@ app.$mount()
 export default {
   config: {
     usingComponents: {
-      'i-button': '../../static/dist/button/index'
+      'i-button': '../../dist/button/index'
     }
   }
 }
