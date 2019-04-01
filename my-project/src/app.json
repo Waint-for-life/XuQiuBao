@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/index/express/main",
+    "pages/index/twoHandsBook/main",
+    "pages/logs/main",
+    "pages/conversation/main",
+    "pages/me/main",
+    "pages/release/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "backgroundColor": "#fafafa",
+    "selectedColor": "#333",
+    "borderStyle": "white",
+
+    "list": [{
+      "text": "需求广场",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/images/需求1.png",
+      "selectedIconPath": "static/images/需求2.png"
+    }, {
+      "text": "发布",
+      "pagePath": "pages/release/main",
+      "iconPath": "static/images/发布1.png",
+      "selectedIconPath": "static/images/发布2.png"
+    },{
+      "text": "会话",
+      "pagePath": "pages/conversation/main",
+      "iconPath": "static/images/会话1.png",
+      "selectedIconPath": "static/images/会话2.png"
+    },{
+      "text": "我的",
+      "pagePath": "pages/me/main",
+      "iconPath": "static/images/我的1.png",
+      "selectedIconPath": "static/images/我的2.png"
+    }
+    ],
+
+    "items": [{
+      "name": "需求广场",
+      "pagePath": "pages/index/main",
+      "icon": "static/images/需求1.png",
+      "activeIcon": "static/images/需求2.png"
+    }, {
+      "name": "发布",
+      "pagePath": "pages/release/main",
+      "icon": "static/images/发布1.png",
+      "activeIcon": "static/images/发布2.png"
+    },
+      {
+        "name": "会话",
+        "pagePath": "pages/conversation/main",
+        "icon": "static/images/会话1.png",
+        "activeIcon": "static/images/会话2.png"
+      },{
+        "name": "我的",
+        "pagePath": "pages/me/main",
+        "icon": "static/images/我的1.png",
+        "activeIcon": "static/images/我的2.png"
+      }],
+    "position": "bottom"
+  }
+}
