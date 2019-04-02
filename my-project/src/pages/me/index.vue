@@ -9,6 +9,18 @@
     </view>
     </view>
     <i-button open-type="getUserInfo" @click="bindGetUserInfo">授权登录</i-button>
+<i-panel>
+    <view style="padding: 15px;">我的需求</view>
+</i-panel>
+<i-panel>
+    <view style="padding: 15px;">已完成需求</view>
+</i-panel>
+<i-panel>
+    <view style="padding: 15px;">待完成需求</view>
+</i-panel>
+<i-panel>
+    <view style="padding: 15px;">反馈建议</view>
+</i-panel>
   </div>
 </template>
 

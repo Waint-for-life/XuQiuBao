@@ -39,6 +39,21 @@
         <i-grid-label>运动</i-grid-label>
     </i-grid-item>
     </i-grid>
+<i-panel>
+    <view style="padding: 15px;">需求广场</view>
+</i-panel>
+ <i-card title="快递" extra="帮取快递" thumb="/static/images/快递.png">
+    <view slot="content">有同学能帮我去二期楚才菜鸟驿站取个快递吗？在线等</view>
+    <view slot="footer">具体信息请私戳，非诚勿扰</view>
+</i-card>
+<i-card title="二手书" extra="二手书便宜出" thumb="/static/images/book.png">
+    <view slot="content">应届毕业生，毕业在即，便宜出二手书给学弟学妹。</view>
+    <view slot="footer">买不了吃亏，买不了上当。</view>
+</i-card>
+<i-card title="拿外卖" extra="三期门口" thumb="/static/images/外卖.png">
+    <view slot="content">帮取下外卖，三期门口</view>
+    <view slot="footer">懒癌发作，帮取下外卖。</view>
+</i-card>
     </div>
 </template>
 
