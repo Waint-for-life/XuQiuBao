@@ -42,7 +42,7 @@
 <i-panel>
     <view style="padding: 15px;">需求广场</view>
 </i-panel>
-<i-card v-for="(item, index) in expressList" :key="index" title="需求" extra="需求" thumb="/static/images/需求.png">
+<i-card v-for="(item, index) in expressList" :key="index" title="需求"  thumb="/static/images/需求.png">
     <view slot="content"><text>发布者：{{ item.studentNumber }} \n 详情：{{ item.detail }} \n 赏金：{{ item.price }} </text> 
     </view>
     <view slot="footer">具体信息请私戳，非诚勿扰</view>

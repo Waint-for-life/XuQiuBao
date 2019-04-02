@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="title">
 <i-panel>
     <view style="padding: 15px;">快递</view>
 </i-panel>
@@ -40,6 +40,5 @@ export default {
 <style scoped>
 .title {
   text-align: center;
-  font-size: 30px;
 }
 </style>

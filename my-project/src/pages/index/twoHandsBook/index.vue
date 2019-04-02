@@ -1,6 +1,8 @@
 <template>
-  <div class="twoHandsBook">
-    <p class="title">二手书</p>
+  <div class="title">
+<i-panel>
+    <view style="padding: 15px;">二手书</view>
+</i-panel>
   </div>
 </template>
 
@@ -18,6 +20,5 @@
 <style scoped>
   .title {
     text-align: center;
-    font-size: 30px;
   }
 </style>
