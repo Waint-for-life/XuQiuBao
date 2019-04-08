@@ -5,7 +5,7 @@
     <open-data type="userAvatarUrl"></open-data>
     </view>
     <view class="userinfo-name">
-       <open-data type="userNickName"></open-data>
+    <open-data type="userNickName"></open-data>
     </view>
     </view>
     <i-button open-type="getUserInfo" @click="bindGetUserInfo">授权登录</i-button>
@@ -29,7 +29,8 @@
       data () {
       },
   methods: {
-        bindGetUserInfo () {
+        bindGetUserInfo: function (e) {
+          console.log(e)
         }
       }
     }

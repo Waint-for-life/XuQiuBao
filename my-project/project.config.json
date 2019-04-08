@@ -6,12 +6,14 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"nodeModules": true,
 		"autoAudits": false
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wxc6f0d2fde24208d0",
 	"projectname": "myjd-mpvue",
+	"libVersion": "2.6.4",
 	"condition": {
 		"search": {
 			"current": -1,
