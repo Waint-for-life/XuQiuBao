@@ -14,7 +14,19 @@
 </view>
 </template>
 
-
+<script>
+    export default {
+      data () {
+      },
+  methods: {
+        bindGetUserInfo () {
+          wx.switchTab({
+            url: '/pages/index/main'
+          })
+        }
+      }
+    }
+</script>
 <style scoped>
 .userinfo {  
   position: relative;  
