@@ -29,8 +29,10 @@
       data () {
       },
   methods: {
-        bindGetUserInfo: function (e) {
-          console.log(e)
+        bindGetUserInfo () {
+          wx.navigateTo({
+            url: 'login/main'
+          })
         }
       }
     }
