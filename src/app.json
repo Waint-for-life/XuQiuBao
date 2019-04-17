@@ -6,7 +6,8 @@
     "pages/logs/main",
     "pages/conversation/main",
     "pages/me/main",
-    "pages/release/main"
+    "pages/release/main",
+    "pages/me/login/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
