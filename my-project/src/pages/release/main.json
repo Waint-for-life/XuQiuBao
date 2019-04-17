@@ -28,6 +28,7 @@
     "i-message": "../../static/dist/message/index",
     "i-spin": "../../static/dist/spin/index",
     "i-swipeout": "../../static/dist/swipeout/index",
-    "i-input": "../../static/dist/input/index"
+    "i-input": "../../static/dist/input/index",
+    "i-input-number": "../../static/dist/input-number/index"
 }
 }
