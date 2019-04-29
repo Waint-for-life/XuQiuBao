@@ -42,8 +42,8 @@
 <i-panel>
     <view style="padding: 15px;">需求广场</view>
 </i-panel>
-<i-card v-for="(item, index) in expressList" :key="index" title="需求" :extra="item.price" thumb="/static/images/需求.png">
-    <view slot="content"><text>发布者：{{ item.studentNumber }} \n 详情：{{ item.detail }} \n 赏金：{{ item.price }} </text> 
+<i-card v-for="(item, index) in Demands" :key="index" title="需求" :extra="item.keywords" thumb="/static/images/需求.png">
+    <view slot="content"><text>发布者：{{ item.NickName }} \n 详情：{{ item.detail }} \n 赏金：{{ item.reward }} </text> 
     </view>
     <view slot="footer">具体信息请私戳，非诚勿扰</view>
  </i-card>
@@ -68,14 +68,14 @@ export default {
   name: 'index',
   data () {
     return {
-      expressList: []
+      Demands: []
     }
   },
   mounted: function () {
     this.$fly.get('https://www.wjxweb.cn:789/Demand/all/1')
       .then((res) => {
         console.log(res)
-        this.expressList = res.data.data
+        this.demandList = res.data.data
       })
       .catch((err) => {
         console.log(err)
@@ -95,6 +95,13 @@ export default {
   },
 
   created () {
+    const db = wx.cloud.database({ env: 'xuqiubao-63e52d' })
+    db.collection('Demand').get().then(
+      res => {
+        console.log(res.data)
+        this.Demands = res.data
+      }
+    )
     // let app = getApp()
   }
 }

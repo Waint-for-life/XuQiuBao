@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"appid": "wxc6f0d2fde24208d0",
 	"projectname": "myjd-mpvue",
-	"libVersion": "2.6.5",
+	"libVersion": "2.6.6",
 	"condition": {
 		"search": {
 			"current": -1,

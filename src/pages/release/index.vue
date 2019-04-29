@@ -24,7 +24,7 @@
       }
     },
     mounted: function () {
-      this.$fly.get('https://www.wjxweb.cn:789/Demand/all/1')
+      this.$fly.get('https://www.wjxweb.cn:789/Demand/')
         .then((res) => {
           console.log(res)
           this.demandList = res.data.data

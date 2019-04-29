@@ -3,6 +3,9 @@ import App from './App'
 import '../weui.css'
 import Fly from 'flyio/dist/npm/wx'
 
+wx.cloud.init({
+  traceUser: true
+})
 const fly = new Fly()
 Vue.prototype.$fly = fly
 Vue.config.productionTip = false
