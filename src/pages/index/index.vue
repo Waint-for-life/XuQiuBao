@@ -6,13 +6,13 @@
         </i-grid-icon>
         <i-grid-label>快递</i-grid-label>
     </i-grid-item>
-      <i-grid-item @click="toTwoHandsBookPage">
+      <i-grid-item @click="toUsedBookPage">
         <i-grid-icon>
             <image src="/static/images/book.png" />
         </i-grid-icon>
         <i-grid-label>二手书</i-grid-label>
     </i-grid-item>
-      <i-grid-item>
+      <i-grid-item @click="toTakeoutPage">
         <i-grid-icon>
             <image src="/static/images/外卖.png" />
         </i-grid-icon>
@@ -20,19 +20,19 @@
     </i-grid-item>
     </i-grid>
     <i-grid>
-      <i-grid-item>
+      <i-grid-item @click="toTravelPage">
         <i-grid-icon>
             <image src="/static/images/结伴.png" />
         </i-grid-icon>
         <i-grid-label>结伴出游</i-grid-label>
     </i-grid-item>
-      <i-grid-item>
+      <i-grid-item @click="toErrandsPage">
         <i-grid-icon>
             <image src="/static/images/跑腿.png" />
         </i-grid-icon>
         <i-grid-label>跑腿</i-grid-label>
     </i-grid-item>
-      <i-grid-item>
+      <i-grid-item @click="toSportPage">
         <i-grid-icon>
             <image src="/static/images/运动.png" />
         </i-grid-icon>
@@ -72,14 +72,13 @@ export default {
     }
   },
   mounted: function () {
-    this.$fly.get('https://www.wjxweb.cn:789/Demand/all/1')
-      .then((res) => {
-        console.log(res)
-        this.demandList = res.data.data
-      })
-      .catch((err) => {
-        console.log(err)
-      })
+    const db = wx.cloud.database()
+    db.collection('demand').get({
+      success: function (res) {
+        // res.data 包含该记录的数据
+        console.log(res.data)
+      }
+    })
   },
   methods: {
     toExpressPage () {
@@ -87,9 +86,29 @@ export default {
         url: 'express/main'
       })
     },
-    toTwoHandsBookPage () {
+    toSportPage () {
       wx.navigateTo({
-        url: 'twoHandsBook/main'
+        url: 'sports/main'
+      })
+    },
+    toErrandsPage () {
+      wx.navigateTo({
+        url: 'errands/main'
+      })
+    },
+    toTakeoutPage () {
+      wx.navigateTo({
+        url: 'takeout/main'
+      })
+    },
+    toTravelPage () {
+      wx.navigateTo({
+        url: 'travel/main'
+      })
+    },
+    toUsedBookPage () {
+      wx.navigateTo({
+        url: 'usedBook/main'
       })
     }
   },
