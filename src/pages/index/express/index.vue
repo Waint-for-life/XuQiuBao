@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted: function () {
-    this.$fly.get('https://www.wjxweb.cn:789/Demand/all/1')
+    this.$fly.get('https://www.wjxweb.cn:789/Demand/all/1?type=keywords&value=express')
       .then((res) => {
         console.log(res)
         this.expressList = res.data.data
