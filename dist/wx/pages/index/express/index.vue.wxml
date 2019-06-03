@@ -1,0 +1,11 @@
+<template name="24113082">
+  <view class="_div data-v-cfb1c122 title">
+    <i-panel class="_i-panel data-v-cfb1c122">
+      <view style="padding: 15px;" class="_view data-v-cfb1c122">快递</view>
+    </i-panel>
+    <i-card wx:key="index" key="{{index}}" title="快递" extra="帮取快递" thumb="/static/images/快递.png" wx:for="{{expressList}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-cfb1c122">
+      <view slot="content" class="_view data-v-cfb1c122"><text class="_text data-v-cfb1c122">发布者：{{ item.studentNumber }} \n 详情：{{ item.detail }} \n 赏金：{{ item.price }} </text></view>
+      <view slot="footer" class="_view data-v-cfb1c122">具体信息请私戳，非诚勿扰</view>
+    </i-card>
+  </view>
+</template>

@@ -1,0 +1,25 @@
+<template name="88b54a8a">
+  <view class="_div data-v-72174072">
+    <view class="_view data-v-72174072 userinfo">
+      <view class="_view data-v-72174072 userinfo-avatar">
+        <open-data type="userAvatarUrl" class="_open-data data-v-72174072"></open-data>
+      </view>
+      <view class="_view data-v-72174072 userinfo-name">
+        <open-data type="userNickName" class="_open-data data-v-72174072"></open-data>
+      </view>
+    </view>
+    <i-button open-type="getUserInfo" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-button data-v-72174072">授权登录</i-button>
+    <i-panel class="_i-panel data-v-72174072">
+      <view style="padding: 15px;" class="_view data-v-72174072">我的需求</view>
+    </i-panel>
+    <i-panel class="_i-panel data-v-72174072">
+      <view style="padding: 15px;" class="_view data-v-72174072">已完成需求</view>
+    </i-panel>
+    <i-panel class="_i-panel data-v-72174072">
+      <view style="padding: 15px;" class="_view data-v-72174072">待完成需求</view>
+    </i-panel>
+    <i-panel class="_i-panel data-v-72174072">
+      <view style="padding: 15px;" class="_view data-v-72174072">反馈建议</view>
+    </i-panel>
+  </view>
+</template>

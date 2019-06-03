@@ -1,0 +1,15 @@
+<template name="4f2ae860">
+  <view class="_div data-v-5fe06ffa">
+    <view class="_view data-v-5fe06ffa">
+      <i-panel title="发布需求(通过滑动选择需求种类: )" class="_i-panel data-v-5fe06ffa"></i-panel>
+      <picker-view indicator-style="height: 50px;" style="width:100%; height: 100px;margin:0 auto;" value="{{value}}" bindchange="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_picker-view data-v-5fe06ffa">
+        <picker-view-column class="_picker-view-column data-v-5fe06ffa">
+          <view wx:key="item" key="{{item}}" class="_view data-v-5fe06ffa demandList" wx:for="{{demandList}}" wx:for-index="index" wx:for-item="item">{{item.keywords}}类</view>
+        </picker-view-column>
+      </picker-view>
+      <i-input value="{{detail}}" mode="wrapped" title="详情" type="textarea" placeholder="请输入你的需求内容(最多150字)" maxlength="150" class="_i-input data-v-5fe06ffa"></i-input>
+      <i-input value="{{price}}" mode="wrapped" type="number" title="赏金" placeholder="请输入你的赏金: " class="_i-input data-v-5fe06ffa"></i-input>
+      <i-button type="primary" bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-button data-v-5fe06ffa">发布</i-button>
+    </view>
+  </view>
+</template>

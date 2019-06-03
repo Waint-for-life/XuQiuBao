@@ -1,0 +1,11 @@
+<template name="5b19dbb3">
+  <view class="_div data-v-322ba37d title">
+    <i-panel class="_i-panel data-v-322ba37d">
+      <view style="padding: 15px;" class="_view data-v-322ba37d">二手书</view>
+    </i-panel>
+    <i-card wx:key="index" key="{{index}}" title="二手书" extra="二手书" thumb="/static/images/book.png" wx:for="{{expressList}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-322ba37d">
+      <view slot="content" class="_view data-v-322ba37d"><text class="_text data-v-322ba37d">发布者：{{ item.belongUsername }} \n 详情：{{ item.bookName }} \n 赏金：{{ item.bookPrice }} </text></view>
+      <view slot="footer" class="_view data-v-322ba37d">具体信息请私戳，非诚勿扰</view>
+    </i-card>
+  </view>
+</template>
