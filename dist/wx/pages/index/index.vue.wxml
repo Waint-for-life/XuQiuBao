@@ -44,7 +44,7 @@
       <view style="padding: 15px;" class="_view data-v-372e7b4e">需求广场</view>
     </i-panel>
     <i-card wx:key="index" key="{{index}}" title="需求" extra="{{item.keywords}}" thumb="/static/images/需求.png" wx:for="{{Demands}}" wx:for-index="index" wx:for-item="item" class="_i-card data-v-372e7b4e">
-      <view slot="content" class="_view data-v-372e7b4e"><text class="_text data-v-372e7b4e">发布者：{{ item.NickName }} \n 详情：{{ item.detail }} \n 赏金：{{ item.reward }} </text></view>
+      <view slot="content" class="_view data-v-372e7b4e"><text class="_text data-v-372e7b4e">发布者：{{ item.nickname }} \n 赏金：{{ item.reward }} \n 详情：{{ item.need }} </text></view>
       <view slot="footer" class="_view data-v-372e7b4e">具体信息请私戳，非诚勿扰</view>
     </i-card>
     <i-card title="快递" extra="帮取快递" thumb="/static/images/快递.png" class="_i-card data-v-372e7b4e">

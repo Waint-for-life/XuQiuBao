@@ -4,7 +4,6 @@
     "pages/index/express/main",
     "pages/index/twoHandsBook/main",
     "pages/logs/main",
-    "pages/conversation/main",
     "pages/me/main",
     "pages/release/main",
     "pages/me/login/main"
@@ -32,11 +31,6 @@
       "iconPath": "static/images/发布1.png",
       "selectedIconPath": "static/images/发布2.png"
     },{
-      "text": "会话",
-      "pagePath": "pages/conversation/main",
-      "iconPath": "static/images/会话1.png",
-      "selectedIconPath": "static/images/会话2.png"
-    },{
       "text": "我的",
       "pagePath": "pages/me/main",
       "iconPath": "static/images/我的1.png",
@@ -56,11 +50,6 @@
       "activeIcon": "static/images/发布2.png"
     },
       {
-        "name": "会话",
-        "pagePath": "pages/conversation/main",
-        "icon": "static/images/会话1.png",
-        "activeIcon": "static/images/会话2.png"
-      },{
         "name": "我的",
         "pagePath": "pages/me/main",
         "icon": "static/images/我的1.png",

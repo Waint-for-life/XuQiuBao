@@ -26,7 +26,7 @@
         </i-grid-icon>
         <i-grid-label>结伴出游</i-grid-label>
     </i-grid-item>
-      <i-grid-item @click="toErrandsPage">
+      <i-grid-item @click="toRunPage">
         <i-grid-icon>
             <image src="/static/images/跑腿.png" />
         </i-grid-icon>
@@ -43,7 +43,7 @@
     <view style="padding: 15px;">需求广场</view>
 </i-panel>
 <i-card v-for="(item, index) in Demands" :key="index" title="需求" :extra="item.keywords" thumb="/static/images/需求.png">
-    <view slot="content"><text>发布者：{{ item.NickName }} \n 详情：{{ item.detail }} \n 赏金：{{ item.reward }} </text> 
+    <view slot="content"><text>发布者：{{ item.nickname }} \n  赏金：{{ item.reward }} \n 详情：{{ item.need }}  </text> 
     </view>
     <view slot="footer">具体信息请私戳，非诚勿扰</view>
  </i-card>
@@ -71,15 +71,16 @@ export default {
       Demands: []
     }
   },
-  mounted: function () {
-    const db = wx.cloud.database()
-    db.collection('demand').get({
-      success: function (res) {
-        // res.data 包含该记录的数据
-        console.log(res.data)
-      }
-    })
-  },
+  // mounted: function () {
+  //   const db = wx.cloud.database()
+  //   db.collection('demand').where({
+  //     _openid: 'o8Unj5EoX2byLgLZCBehdAaXzoyo'}).get({
+  //     success: function (res) {
+  //       // res.data 包含该记录的数据
+  //       console.log(res.data)
+  //     }
+  //   })
+  // },
   methods: {
     toExpressPage () {
       wx.navigateTo({
@@ -89,11 +90,6 @@ export default {
     toSportPage () {
       wx.navigateTo({
         url: 'sports/main'
-      })
-    },
-    toErrandsPage () {
-      wx.navigateTo({
-        url: 'errands/main'
       })
     },
     toTakeoutPage () {
@@ -110,12 +106,17 @@ export default {
       wx.navigateTo({
         url: 'usedBook/main'
       })
+    },
+    toRunPage () {
+      wx.navigateTo({
+        url: 'run/main'
+      })
     }
   },
 
   created () {
     const db = wx.cloud.database({ env: 'xuqiubao-63e52d' })
-    db.collection('Demand').get().then(
+    db.collection('demand').get().then(
       res => {
         console.log(res.data)
         this.Demands = res.data

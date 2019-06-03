@@ -2,14 +2,14 @@ require("../../common/manifest.js")
 require("../../common/vendor.js")
 global.webpackJsonpMpvue([2],{
 
-/***/ 70:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index__ = __webpack_require__(62);
 
 
 
@@ -26,16 +26,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 71:
+/***/ 62:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5fe06ffa_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5fe06ffa_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_fileExt_template_wxml_script_js_style_wxss_platform_wx_node_modules_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(65);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(72)
+  __webpack_require__(63)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -80,14 +80,14 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 72:
+/***/ 63:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 73:
+/***/ 64:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108,41 +108,42 @@ if (false) {(function () {
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-  name: 'index.vue',
+  name: 'index',
   data: function data() {
     return {
-      demandList: [],
-      detail: '',
-      price: ''
+      demandList: []
     };
   },
 
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$fly.get('https://www.wjxweb.cn:789/Demand/').then(function (res) {
-      console.log(res);
-      _this.demandList = res.data.data;
-    }).catch(function (err) {
-      console.log(err);
-    });
-  },
-  methods: {
+  method: {
     release: function release() {
-      this.$fly.post('https://www.wjxweb.cn:789/Demand/', {
-        keywords: 0, detail: 0, price: 0
+      var db = wx.cloud.database({ env: 'xuqiubao-63e52d' });
+      db.collection('demand').add({
+        // data 字段表示需新增的 JSON 数据
+        data: {
+          description: '添加一个需求',
+          demand: []
+        }
       }).then(function (res) {
         console.log(res);
-      }).catch(function (error) {
-        console.log(error);
-      });
+      }).catch(console.error);
     }
+  },
+  created: function created() {
+    var _this = this;
+
+    var db = wx.cloud.database({ env: 'xuqiubao-63e52d' });
+    db.collection('demand').get().then(function (res) {
+      console.log(res.data);
+      _this.Demands = res.data;
+    });
+    // let app = getApp()
   }
 });
 
 /***/ }),
 
-/***/ 74:
+/***/ 65:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -160,11 +161,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     },
     attrs: {
       "indicator-style": "height: 50px;",
-      "value": _vm.value,
-      "eventid": '0'
-    },
-    on: {
-      "change": _vm.bindChange
+      "value": _vm.value
     }
   }, [_c('picker-view-column', {
     attrs: {
@@ -172,7 +169,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     }
   }, _vm._l((_vm.demandList), function(item, index) {
     return _c('view', {
-      key: item,
+      key: index,
       staticClass: "demandList"
     }, [_vm._v(_vm._s(item.keywords) + "类")])
   }))], 1), _vm._v(" "), _c('i-input', {
@@ -197,7 +194,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }), _vm._v(" "), _c('i-button', {
     attrs: {
       "type": "primary",
-      "eventid": '1',
+      "eventid": '0',
       "mpcomid": '4'
     },
     on: {
@@ -218,4 +215,4 @@ if (false) {
 
 /***/ })
 
-},[70]);
+},[61]);
