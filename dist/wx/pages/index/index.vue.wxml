@@ -1,4 +1,4 @@
-<template name="2a97e3aa">
+<template name="c1e3de94">
   <view class="_div data-v-372e7b4e">
     <i-grid class="_i-grid data-v-372e7b4e">
       <i-grid-item bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-grid-item data-v-372e7b4e">
