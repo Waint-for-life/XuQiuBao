@@ -30,7 +30,7 @@
         <i-grid-icon>
             <image src="/static/images/跑腿.png" />
         </i-grid-icon>
-        <i-grid-label>跑腿</i-grid-label>
+        <i-grid-label>兼职</i-grid-label>
     </i-grid-item>
       <i-grid-item @click="toSportPage">
         <i-grid-icon>
@@ -42,11 +42,11 @@
 <i-panel>
     <view style="padding: 15px;">需求广场</view>
 </i-panel>
-<i-card v-for="(item, index) in Demands" :key="index" title="需求" :extra="item.keywords" thumb="/static/images/需求.png">
+<!-- <i-card v-for="(item, index) in Demands" :key="index" title="需求" :extra="item.keywords" thumb="/static/images/需求.png">
     <view slot="content"><text>发布者：{{ item.nickname }} \n  赏金：{{ item.reward }} \n 详情：{{ item.need }}  </text> 
     </view>
     <view slot="footer">具体信息请私戳，非诚勿扰</view>
- </i-card>
+ </i-card> -->
  <i-card title="快递" extra="帮取快递" thumb="/static/images/快递.png">
     <view slot="content">有同学能帮我去二期楚才菜鸟驿站取个快递吗？在线等</view>
     <view slot="footer">具体信息请私戳，非诚勿扰</view>
@@ -109,7 +109,7 @@ export default {
     },
     toRunPage () {
       wx.navigateTo({
-        url: 'run/main'
+        url: 'job/main'
       })
     }
   },

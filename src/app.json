@@ -1,8 +1,6 @@
 {
   "pages": [
     "pages/index/main",
-    "pages/index/express/main",
-    "pages/index/twoHandsBook/main",
     "pages/logs/main",
     "pages/me/main",
     "pages/release/main",

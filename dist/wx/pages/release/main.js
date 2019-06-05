@@ -135,7 +135,7 @@ if (false) {(function () {
     var db = wx.cloud.database({ env: 'xuqiubao-63e52d' });
     db.collection('demand').get().then(function (res) {
       console.log(res.data);
-      _this.Demands = res.data;
+      _this.demandList = res.data;
     });
     // let app = getApp()
   }
@@ -170,8 +170,8 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
   }, _vm._l((_vm.demandList), function(item, index) {
     return _c('view', {
       key: index,
-      staticClass: "demandList"
-    }, [_vm._v(_vm._s(item.keywords) + "类")])
+      staticClass: "demand"
+    }, [_vm._v(_vm._s(item.keywords))])
   }))], 1), _vm._v(" "), _c('i-input', {
     attrs: {
       "value": _vm.detail,
